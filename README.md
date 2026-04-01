@@ -1,4 +1,4 @@
-# Digital Integration for Modern Oil Production Monitoring Systems
+# Digital Integration for Oil Production Monitoring
 
 This project demonstrates digital integration systems for modern oil production monitoring.
 
@@ -33,7 +33,8 @@ Edit `config.yaml` to customize:
 
 Digital integration features:
 - Real-time production monitoring
-- KPI calculation (efficiency, volatility)
+- Performance metrics calculation
+- Trend analysis
 - Alert thresholds
 - Historical data analysis
 

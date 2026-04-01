@@ -7,8 +7,8 @@ data:
   seed: 42
 
 monitoring:
-  alert_threshold: 0.75
-  check_efficiency: true
+  alert_threshold: 0.8
+  check_trend: true
 
 output:
   figures_dir: "images"

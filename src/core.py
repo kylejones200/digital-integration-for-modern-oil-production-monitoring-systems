@@ -1,4 +1,4 @@
-"""Core functions for digital integration oil production monitoring systems."""
+"""Core functions for digital integration oil production monitoring."""
 
 import numpy as np
 import pandas as pd
@@ -10,26 +10,28 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-def analyze_production_monitoring(df: pd.DataFrame, timestamp_col: str,
-                                 production_col: str) -> pd.DataFrame:
-    """Analyze oil production monitoring data."""
+def analyze_production_data(df: pd.DataFrame, timestamp_col: str, 
+                           production_col: str) -> pd.DataFrame:
+    """Analyze oil production data."""
     df = df.copy()
     df[timestamp_col] = pd.to_datetime(df[timestamp_col])
     df = df.set_index(timestamp_col)
     return df
 
-def calculate_production_kpis(df: pd.DataFrame, production_col: str) -> Dict:
-    """Calculate production key performance indicators."""
+def calculate_production_metrics(df: pd.DataFrame, production_col: str) -> Dict:
+    """Calculate production performance metrics."""
     return {
         'total_production': df[production_col].sum(),
         'mean_production': df[production_col].mean(),
-        'peak_production': df[production_col].max(),
-        'efficiency': df[production_col].mean() / df[production_col].max() if df[production_col].max() > 0 else 0,
-        'volatility': df[production_col].std() / df[production_col].mean() if df[production_col].mean() > 0 else 0
+        'max_production': df[production_col].max(),
+        'min_production': df[production_col].min(),
+        'volatility': df[production_col].std() / df[production_col].mean() if df[production_col].mean() > 0 else 0,
+        'trend': 'increasing' if df[production_col].iloc[-1] > df[production_col].iloc[0] else 'decreasing'
     }
 
-def plot_production_monitoring(df: pd.DataFrame, production_col: str, title: str, output_path: Path):
- """Plot production monitoring """
+def plot_production_monitoring(df: pd.DataFrame, production_col: str,
+                              title: str, output_path: Path):
+ """Plot production monitoring data """
     fig, ax = plt.subplots(figsize=(10, 6))
     
     ax.plot(df.index, df[production_col], color="#4A90A4", linewidth=1.2)
