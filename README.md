@@ -1,13 +1,44 @@
 # Digital Integration for Modern Oil Production Monitoring Systems
 
-**Published:** 2025-04-16
-**Medium:** [https://medium.com/@kyle-t-jones/digital-integration-for-modern-oil-production-monitoring-systems-b4877961aa38](https://medium.com/@kyle-t-jones/digital-integration-for-modern-oil-production-monitoring-systems-b4877961aa38)
+This project demonstrates digital integration systems for modern oil production monitoring.
 
-## About
+## Article
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
+Medium article: [Digital Integration for Modern Oil Production Monitoring Systems](https://medium.com/@kylejones_47003/digital-integration-for-modern-oil-production-monitoring-systems-b4877961aa38)
 
-## Files
+## Project Structure
 
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
+```
+.
+├── README.md           # This file
+├── main.py            # Main entry point
+├── config.yaml        # Configuration file
+├── requirements.txt   # Python dependencies
+├── src/               # Core functions
+│   ├── core.py        # Production monitoring functions
+│   └── plotting.py    # Tufte-style plotting utilities
+├── tests/             # Unit tests
+├── data/              # Data files
+└── images/            # Generated plots and figures
+```
+
+## Configuration
+
+Edit `config.yaml` to customize:
+- Data source or synthetic generation
+- Monitoring thresholds and alerts
+- Output settings
+
+## Features
+
+Digital integration features:
+- Real-time production monitoring
+- KPI calculation (efficiency, volatility)
+- Alert thresholds
+- Historical data analysis
+
+## Caveats
+
+- By default, generates synthetic production data.
+- Production monitoring requires real-time data integration.
+- Alert thresholds should be calibrated to operational requirements.
