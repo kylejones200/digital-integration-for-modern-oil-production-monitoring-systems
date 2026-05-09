@@ -31,7 +31,7 @@ def calculate_production_metrics(df: pd.DataFrame, production_col: str) -> Dict:
 
 def plot_production_monitoring(df: pd.DataFrame, production_col: str,
                               title: str, output_path: Path):
- """Plot production monitoring data """
+    """Plot production monitoring data """
     fig, ax = plt.subplots(figsize=(10, 6))
     
     ax.plot(df.index, df[production_col], color="#4A90A4", linewidth=1.2)
