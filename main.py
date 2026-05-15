@@ -18,7 +18,7 @@ def load_config(config_path: Path = None) -> dict:
     if config_path is None:
         config_path = Path(__file__).parent / 'config.yaml'
     
-    with open(config_path, 'r') as f:
+    with open(config_path) as f:
         return yaml.safe_load(f)
 
 def main():
@@ -54,7 +54,7 @@ def main():
     
         metrics = calculate_production_metrics(df, config['data']['production_column'])
     
-    logging.info(f"\nProduction Metrics:")
+    logging.info("\nProduction Metrics:")
     logging.info(f"Total Production: {metrics['total_production']:.2f}")
     logging.info(f"Mean Production: {metrics['mean_production']:.2f}")
     logging.info(f"Volatility: {metrics['volatility']:.4f}")
