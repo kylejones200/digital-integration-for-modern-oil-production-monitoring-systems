@@ -43,3 +43,11 @@ Digital integration features:
 - By default, generates synthetic production data.
 - Production monitoring requires real-time data integration.
 - Alert thresholds should be calibrated to operational requirements.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
